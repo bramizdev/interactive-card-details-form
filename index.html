@@ -1,51 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <!-- Displays site properly based on user's device -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Author and description -->
+    <meta name="author" content="Brayan Miza" />
+    <meta
+      name="description"
+      content="This is a solution to the Results summary component challenge on Frontend Mentor."
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Script -->
+    <script defer src="./script.js"></script>
+    <!-- Title -->
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="visually-hidden">
+        Interactive card details form challenge on Frontend Mentor
+      </h1>
+      <div class="main__container">
+        <section class="details">
+          <h2 class="visually-hidden">Card details</h2>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+          <div class="details__container">
+            <div class="card details__front">
+              <img src="./images/bg-card-front.png" alt="" aria-hidden="true" />
+              <div class="card front__container">
+                <img
+                  class="front__logo"
+                  src="./images/card-logo.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="front__data">
+                  <p class="front__number">0000 0000 0000 0000</p>
+                  <div class="front__cardholder-container">
+                    <p class="front__cardholder">Jane Appleseed</p>
+                    <p class="front__expiration">00/00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <div class="card details__back">
+              <img
+                class="card__bg"
+                src="./images/bg-card-back.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="back__cvc">000</p>
+            </div>
+          </div>
+        </section>
+        <section class="form">
+          <h2 class="visually-hidden">Form</h2>
+          <form class="form__form">
+            <div class="form__control">
+              <label class="form__label" for="cardholder">
+                Cardholder Name
+              </label>
+              <input
+                class="form__input"
+                type="text"
+                id="cardholder"
+                name="cardholder"
+                placeholder="e.g. Jane Appleseed"
+              />
+              <p class="form__message-error"></p>
+            </div>
+            <div class="form__control">
+              <label class="form__label" for="number">Card Number</label>
+              <input
+                class="form__input"
+                type="text"
+                inputmode="numeric"
+                id="number"
+                name="number"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+              <p class="form__message-error"></p>
+            </div>
+            <div class="grid-cols-2">
+              <div class="form__control">
+                <label class="form__label" for="exp-month">
+                  Exp. Date (MM/YY)
+                </label>
+                <div class="grid-cols-2">
+                  <input
+                    class="form__input"
+                    type="text"
+                    inputmode="numeric"
+                    id="exp-month"
+                    name="exp-month"
+                    placeholder="MM"
+                  />
+                  <input
+                    class="form__input"
+                    type="text"
+                    inputmode="numeric"
+                    id="exp-year"
+                    name="exp-year"
+                    placeholder="YY"
+                  />
+                </div>
+                <p class="form__message-error"></p>
+              </div>
+              <div class="form__control">
+                <label class="form__label" for="cvc">CVC</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  inputmode="numeric"
+                  id="cvc"
+                  name="cvc"
+                  placeholder="e.g. 123"
+                />
+                <p class="form__message-error"></p>
+              </div>
+            </div>
+            <input class="btn form__submit" type="submit" value="Confirm" />
+          </form>
+          <div class="form-submitted hidden">
+            <h2 class="visually-hidden">Form submitted</h2>
+            <img
+              class="form-submitted__icon"
+              src="./images/icon-complete.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="form-submitted__container">
+              <p class="form-submitted__header">Thank you!</p>
+              <p class="form-submitted__text">We've added your card details</p>
+            </div>
+            <button class="btn form-submitted__continue" id="reset">
+              Continue
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>
+      . Coded by <a href="https://github.com/bramizdev">@bramizdev</a>.
+    </footer>
+  </body>
 </html>
