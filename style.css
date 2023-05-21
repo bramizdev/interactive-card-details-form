@@ -122,6 +122,25 @@ body {
   font-family: var(--ff-base);
 }
 
+footer {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--clr-primary-500);
+}
+
+footer a:is(:hover, :focus-visible) {
+  color: var(--clr-primary-400);
+}
+
+footer a:focus {
+  outline: 2px solid var(--clr-primary-500);
+  outline-offset: 2px;
+}
+
 /* ----- Main ----- */
 .main {
   height: 100vh;
@@ -131,6 +150,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .main__container {
+    flex-direction: row;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 /* ----- Details ----- */
@@ -151,6 +178,36 @@ body {
 
 .card {
   width: 17.8125rem;
+}
+
+@media (min-width: 1024px) {
+  .details {
+    background: url('./images/bg-main-desktop.png');
+    height: 100%;
+    width: 33.5%;
+    display: grid;
+    align-items: center;
+  }
+
+  .details__container {
+    height: 40%;
+    margin: unset;
+  }
+
+  .card {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .details__container {
+    height: 58%;
+    max-height: 530px;
+  }
+
+  .card {
+    width: 448px;
+  }
 }
 
 /* --- Front --- */
@@ -184,7 +241,7 @@ body {
 
 .front__number {
   font-size: 1.125rem;
-  letter-spacing: 0.125rem;
+  letter-spacing: 2px;
 }
 
 .front__cardholder-container {
@@ -193,6 +250,40 @@ body {
   justify-content: space-between;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .details__front {
+    bottom: unset;
+    left: unset;
+    top: 0;
+    right: -15%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .details__front {
+    right: -27%;
+  }
+
+  .front__container {
+    padding: 32px;
+    padding-top: 24px;
+  }
+
+  .front__logo {
+    width: 5.3125rem;
+  }
+
+  .front__number {
+    font-size: 27px;
+    letter-spacing: 4px;
+  }
+
+  .front__cardholder-container {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
 }
 
 /* --- Back --- */
@@ -210,10 +301,37 @@ body {
   top: 45%;
 }
 
+@media (min-width: 1024px) {
+  .details__back {
+    right: -25%;
+    top: unset;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .details__back {
+    right: -48%;
+  }
+
+  .back__cvc {
+    font-size: 16px;
+    letter-spacing: 2px;
+    top: 44%;
+  }
+}
 /* ----- Form ----- */
 .form {
   flex: 1;
   padding: 5.6rem 1.5rem 1rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .form {
+    padding: unset;
+    display: grid;
+    align-items: center;
+  }
 }
 
 /* --- Form--- */
@@ -258,6 +376,17 @@ body {
   margin-top: 0.8rem;
 }
 
+@media (min-width: 1024px) {
+  .form__form {
+    max-width: 380px;
+  }
+
+  .form__control {
+    display: grid;
+    gap: 0.5rem;
+  }
+}
+
 /* --- Form submitted --- */
 .form-submitted {
   display: grid;
@@ -298,8 +427,8 @@ body {
 
 /* -----Error----- */
 .form__message-error {
-  font-size: 12px;
   color: var(--clr-secondary-500);
+  font-size: 0.75rem;
 }
 
 .form__input-error {
