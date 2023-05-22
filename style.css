@@ -123,13 +123,13 @@ body {
 }
 
 footer {
-  text-align: center;
   padding: 0.5rem;
+  text-align: center;
 }
 
 footer a {
-  text-decoration: none;
   color: var(--clr-primary-500);
+  text-decoration: none;
 }
 
 footer a:is(:hover, :focus-visible) {
@@ -152,11 +152,11 @@ footer a:focus {
   height: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .main__container {
     flex-direction: row;
-    max-width: 1440px;
     margin: 0 auto;
+    max-width: 90rem;
   }
 }
 
@@ -180,13 +180,13 @@ footer a:focus {
   width: 17.8125rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .details {
+    align-items: center;
     background: url('./images/bg-main-desktop.png');
+    display: grid;
     height: 100%;
     width: 33.5%;
-    display: grid;
-    align-items: center;
   }
 
   .details__container {
@@ -195,18 +195,18 @@ footer a:focus {
   }
 
   .card {
-    width: 300px;
+    width: 18.75rem;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .details__container {
     height: 58%;
-    max-height: 530px;
+    max-height: 33.125rem;
   }
 
   .card {
-    width: 448px;
+    width: 28rem;
   }
 }
 
@@ -252,22 +252,22 @@ footer a:focus {
   text-transform: uppercase;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .details__front {
     bottom: unset;
     left: unset;
-    top: 0;
     right: -15%;
+    top: 0;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .details__front {
     right: -27%;
   }
 
   .front__container {
-    padding: 32px;
+    padding: 2rem;
     padding-top: 24px;
   }
 
@@ -276,12 +276,12 @@ footer a:focus {
   }
 
   .front__number {
-    font-size: 27px;
+    font-size: 1.6875rem;
     letter-spacing: 4px;
   }
 
   .front__cardholder-container {
-    font-size: 14px;
+    font-size: 0.875rem;
     letter-spacing: 2px;
   }
 }
@@ -301,21 +301,21 @@ footer a:focus {
   top: 45%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .details__back {
+    bottom: 0;
     right: -25%;
     top: unset;
-    bottom: 0;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .details__back {
     right: -48%;
   }
 
   .back__cvc {
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 2px;
     top: 44%;
   }
@@ -326,11 +326,11 @@ footer a:focus {
   padding: 5.6rem 1.5rem 1rem 1.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .form {
-    padding: unset;
-    display: grid;
     align-items: center;
+    display: grid;
+    padding: unset;
   }
 }
 
@@ -376,9 +376,9 @@ footer a:focus {
   margin-top: 0.8rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .form__form {
-    max-width: 380px;
+    max-width: 23.75rem;
   }
 
   .form__control {

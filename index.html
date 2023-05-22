@@ -54,7 +54,12 @@
                   <p class="front__number">0000 0000 0000 0000</p>
                   <div class="front__cardholder-container">
                     <p class="front__cardholder">Jane Appleseed</p>
-                    <p class="front__expiration">00/00</p>
+                    <p class="front__expiration">
+                      <span class="front__expiration-month">00</span>/<span
+                        class="front__expiration-year"
+                        >00</span
+                      >
+                    </p>
                   </div>
                 </div>
               </div>
@@ -73,7 +78,7 @@
         </section>
         <section class="form">
           <h2 class="visually-hidden">Form</h2>
-          <form class="form__form">
+          <form class="form__form" autocomplete="off">
             <div class="form__control">
               <label class="form__label" for="cardholder">
                 Cardholder Name
@@ -95,6 +100,7 @@
                 inputmode="numeric"
                 id="number"
                 name="number"
+                maxlength="19"
                 placeholder="e.g. 1234 5678 9123 0000"
               />
               <p class="form__message-error"></p>
@@ -112,6 +118,7 @@
                     id="exp-month"
                     name="exp-month"
                     placeholder="MM"
+                    maxlength="2"
                   />
                   <input
                     class="form__input"
@@ -120,6 +127,7 @@
                     id="exp-year"
                     name="exp-year"
                     placeholder="YY"
+                    maxlength="2"
                   />
                 </div>
                 <p class="form__message-error"></p>
@@ -133,6 +141,7 @@
                   id="cvc"
                   name="cvc"
                   placeholder="e.g. 123"
+                  maxlength="4"
                 />
                 <p class="form__message-error"></p>
               </div>
